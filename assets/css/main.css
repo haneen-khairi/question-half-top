@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Cairo-font;
+    src: url(../fonts/Cairo-VariableFont_slnt\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Cairo-font;
+    overflow-y: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.section-half-to-half {
+   
+}
+.laptop-img{
+    display: block;
+}
+.mobile-img{
+    display: none;
+}
+.question-section {
+    padding-top: 20px;
+}
+
+.question-title {
+    text-align: center;
+}
+
+.container-content-color {
+    min-height: 700px;
+}
+
+.display-flex-center-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+
+}
+.sec-btn{
+    width: 200px;
+    text-align: center;
+    padding: 25px 10px;
+}
+.btn-answer{
+    background: #fff;
+    width: 100px;
+    border: 1px solid transparent;
+    text-align: center;
+    color: #9c3c36;
+    font-weight: 800;
+}
+.btn-answer:hover{
+    box-shadow: 1px 7px 10px #000;
+}
+@media screen and (max-width:789px){
+    .laptop-img{
+        display:none;
+    }
+    .mobile-img{
+        display:block;
+        height: 370px;
+    }
+    h1 { 
+        font-size: 1.3rem;
+    }
+    .btn-answer { 
+        width: 80px;
+    }
+}
