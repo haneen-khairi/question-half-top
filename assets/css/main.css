@@ -39,9 +39,9 @@ h1 {
 .mobile-img{
     display: none;
 }
-.question-section {
+/* .question-section {
     padding-top: 20px;
-}
+} */
 
 .question-title {
     text-align: center;
@@ -75,6 +75,118 @@ h1 {
 .btn-answer:hover{
     box-shadow: 1px 7px 10px #000;
 }
+.question-section{
+   text-align: center;
+}
+.btn-success-answer{
+    background: #fff;
+    width: 150px;
+    border: 1px solid transparent;
+    text-align: center;
+    color: #9c3c36;
+    margin-top: 2rem;
+    font-weight: 800;
+}
+.btn-success-answer:hover{
+    box-shadow: 1px 7px 10px #000;
+}
+.popup-trigger i{
+    color:#fff;
+    font-size:2.5rem;
+}
+.popup-trigger { 
+    background-color: transparent; 
+    border: none; 
+    transition: color 0.3s ease 0s;
+  }
+  .popup-trigger:hover {
+   color:#813739;
+  }
+  
+  .popup {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    padding: 30px 15px;
+    color: #000;
+    visibility: hidden;
+    transition: visibility 0.8s ease 0s;
+  }
+  .popup::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.8s ease 0s;
+  }
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 100%;
+  }
+  .popup__body {
+    width: 100%;
+    max-width: 800px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+  }
+  .popup__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .popup__close::after, .popup__close::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: #000;
+    transition: all 0.3s ease 0s;
+  }
+  .popup__close::after {
+    bottom: calc(50% - 0.0625rem);
+    transform: rotate(45deg);
+  }
+  .popup__close::before {
+    top: calc(50% - 0.0625rem);
+    transform: rotate(-45deg);
+  }
+  .popup__text {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .popup.show {
+    visibility: visible;
+    overflow: auto;
+  }
+  .popup.show::before {
+    opacity: 1;
+  }
+  .popup.show .popup__body {
+    transform: scale(1);
+    transition: all 0.3s ease 0.2s;
+  }
+ 
 @media screen and (max-width:789px){
     .laptop-img{
         display:none;
